@@ -1,5 +1,6 @@
 package com.grepmp.app;
 import main.java.com.grepmp.app.CommandReader;
+import main.java.com.grepmp.app.ClientProcessor;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -16,26 +17,15 @@ public class App
         String grep_command = CD.ReadCommand();
         System.out.println("input grep command received by client - "+ grep_command);
 
-        try {
-            Socket s1 = new Socket("localhost", 3000);
-            DataOutputStream dout = new DataOutputStream(s1.getOutputStream());
-            dout.writeUTF(grep_command);
-            dout.flush();
-            
-    
-            // System.out.println("x0");
-
-            // Thread.sleep(5000);
-            // System.out.println("x1");
-            DataInputStream dinp = new DataInputStream(s1.getInputStream());
-            // System.out.println("x2");
-            String grep_result = (String) dinp.readUTF();
-            // System.out.println("x3");
-            System.out.println("The GREP Result received by Client: "+grep_result);
-            dout.close();
-            s1.close();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        ClientProcessor cp1 = new ClientProcessor("localhost",3001,grep_command);
+        ClientProcessor cp2 = new ClientProcessor("localhost",3000,grep_command);
+        Thread client_thread1 = new Thread(cp1);
+        Thread client_thread2 = new Thread(cp2);
+        client_thread1.start();
+        client_thread2.start();
+        // client_thread.join();
+        System.out.println("Threads Started");
+        
+        
     }
 }

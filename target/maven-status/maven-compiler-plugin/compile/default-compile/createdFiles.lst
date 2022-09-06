@@ -1,2 +1,3 @@
 com/grepmp/app/App.class
 main/java/com/grepmp/app/CommandReader.class
+main/java/com/grepmp/app/ClientProcessor.class
