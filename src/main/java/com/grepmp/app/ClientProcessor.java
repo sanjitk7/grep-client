@@ -9,12 +9,12 @@ public class ClientProcessor implements Runnable {
 
     int port;
     String ip;
-    String grep_command;
+    String grepCommand;
 
-    public ClientProcessor(String ip, int port, String grep_command){
+    public ClientProcessor(String ip, int port, String grepCommand){
         this.ip = ip;
         this.port = port;
-        this.grep_command = grep_command;
+        this.grepCommand = grepCommand;
     }
 
     public void run() {
@@ -23,7 +23,7 @@ public class ClientProcessor implements Runnable {
             System.out.println("This is a client process thread with tid: "+ Thread.currentThread().getId());
             Socket s1 = new Socket(this.ip, this.port);
             DataOutputStream dout = new DataOutputStream(s1.getOutputStream());
-            dout.writeUTF(grep_command);
+            dout.writeUTF(grepCommand);
             dout.flush();
 
             // System.out.println("x0");
@@ -32,9 +32,9 @@ public class ClientProcessor implements Runnable {
 
             DataInputStream dinp = new DataInputStream(s1.getInputStream());
             // System.out.println("x2");
-            String grep_result = (String) dinp.readUTF();
+            String grepResult = (String) dinp.readUTF();
             // System.out.println("x3");
-            System.out.println("The GREP Result received by Client: " + grep_result);
+            System.out.println("The GREP Result received by Client: " + grepResult);
             dout.close();
             s1.close();
         } catch (Exception e) {

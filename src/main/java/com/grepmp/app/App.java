@@ -12,18 +12,23 @@ public class App
 {
     public static void main( String[] args )
     {
+        int N = 2;
         System.out.println("Enter GREP Command: ");
         CommandReader CD = new CommandReader();
-        String grep_command = CD.ReadCommand();
-        System.out.println("input grep command received by client - "+ grep_command);
+        String grepCommand = CD.ReadCommand();
+        System.out.println("input grep command received by client - "+ grepCommand);
 
-        ClientProcessor cp1 = new ClientProcessor("localhost",3001,grep_command);
-        ClientProcessor cp2 = new ClientProcessor("localhost",3000,grep_command);
-        Thread client_thread1 = new Thread(cp1);
-        Thread client_thread2 = new Thread(cp2);
-        client_thread1.start();
-        client_thread2.start();
-        // client_thread.join();
+        int[] portsList = new int[]{3000,3001};
+        ClientProcessor[] cp = new ClientProcessor[N];
+        Thread[] clientThread = new Thread[N];
+
+        for (int i=0; i<N;i++){
+            cp[i] = new ClientProcessor("localhost",portsList[i],grepCommand);
+            clientThread[i] = new Thread(cp[i]);
+            clientThread[i].start();
+            System.out.println("Client Process Thread for i="+i);
+        }
+        
         System.out.println("Threads Started");
         
         

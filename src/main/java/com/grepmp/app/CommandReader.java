@@ -3,12 +3,12 @@ import java.util.Scanner;
 
 public class CommandReader {
 
-    String Command;
+    String command;
 
     public String ReadCommand(){
         Scanner sc = new Scanner(System.in);
-        Command = sc.nextLine();
+        command = sc.nextLine();
         sc.close();
-        return Command;
+        return command;
     }
 }
