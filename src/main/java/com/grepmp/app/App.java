@@ -16,7 +16,7 @@ public class App {
     public static void main(String[] args) {
 
         // Initalising number of servers and command string
-        int N = 2;
+        int N = 1;
         System.out.println("Enter GREP Command: ");
         CommandReader CD = new CommandReader();
         String grepCommand = CD.ReadCommand();

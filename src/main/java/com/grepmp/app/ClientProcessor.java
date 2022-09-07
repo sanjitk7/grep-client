@@ -31,10 +31,15 @@ public class ClientProcessor implements Runnable {
             // System.out.println("x1");
 
             DataInputStream dinp = new DataInputStream(s1.getInputStream());
-            // System.out.println("x2");
-            String grepResult = (String) dinp.readUTF();
-            // System.out.println("x3");
-            System.out.println("The GREP Result received by Client: " + grepResult);
+            int byteArrayLength=dinp.readInt();
+            byte[] grepCommandResultBytes=new byte[byteArrayLength];
+            dinp.readFully(grepCommandResultBytes);
+            String grepCommandResult=new String(grepCommandResultBytes,"UTF-8");
+            // String grepResult = (String) dinp.readAllBytes();
+
+
+
+            System.out.println("The GREP Result received by Client: " + grepCommandResult);
             dout.close();
             s1.close();
         } catch (Exception e) {
