@@ -15,8 +15,6 @@ import java.util.Arrays;
 public class App {
     public static void main(String[] args) {
 
-        // Initalising number of servers and command string
-        int N = 1;
         System.out.println("Enter GREP Command: ");
         CommandReader CD = new CommandReader();
         String grepCommand = CD.ReadCommand();
@@ -34,6 +32,9 @@ public class App {
             String[] hostnamesArray = networkProperties.getProperty("hostnames").split(",");
             String[] portsArray = networkProperties.getProperty("ports").split(",");
             // System.out.println("The ports from prop:" + Arrays.toString(portsArray));
+
+            // Initalising number of servers and command string
+            int N = portsArray.length;
 
             ClientProcessor[] cp = new ClientProcessor[N];
             Thread[] clientThread = new Thread[N];
