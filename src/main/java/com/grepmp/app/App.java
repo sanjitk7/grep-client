@@ -26,7 +26,7 @@ public class App {
             // Getting Server Config data from properties file.
             // System.out.println("Hi");
             InputStream propertiesInputStream = new FileInputStream(
-                    "/Users/sanjitkumar/personal_projects/CollegeIllinois/DistributedSystems/GrepDistributed/grepmp/src/networkConfig.properties");
+                    "./src/networkConfig.properties");
             Properties networkProperties = new Properties();
             networkProperties.load(propertiesInputStream);
 
