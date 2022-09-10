@@ -57,7 +57,6 @@ public class App {
             }
 
             System.out.println("TOTAL LINE COUNT: " + ClientProcessor.grepResultTotalLineCount);
-            System.out.println("END");
         } catch (Exception e) {
             System.out.println(e);
         }
