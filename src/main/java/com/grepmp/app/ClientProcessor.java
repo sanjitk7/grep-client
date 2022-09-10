@@ -1,4 +1,4 @@
-package main.java.com.grepmp.app;
+package com.grepmp.app;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

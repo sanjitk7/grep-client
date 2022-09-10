@@ -1,7 +1,8 @@
 package com.grepmp.app;
 
-import main.java.com.grepmp.app.CommandReader;
-import main.java.com.grepmp.app.ClientProcessor;
+import com.grepmp.app.CommandReader;
+import com.grepmp.app.ClientProcessor;
+import com.grepmp.app.CommandReader;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -34,7 +35,14 @@ public class App {
             // System.out.println("The ports from prop:" + Arrays.toString(portsArray));
 
             // Initalising number of servers and command string
-            int N = portsArray.length;
+            int N;
+            if (hostnamesArray.length == portsArray.length){
+                System.out.println("Number of IPs = Number of Ports = "+ hostnamesArray.length);
+                N = hostnamesArray.length;
+            } else{
+                System.out.println("Number of IPs != Number of Ports!!\n Setting N=0");
+                N = 0;
+            }
 
             ClientProcessor[] cp = new ClientProcessor[N];
             Thread[] clientThread = new Thread[N];
