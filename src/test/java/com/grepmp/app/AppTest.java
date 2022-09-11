@@ -24,7 +24,7 @@ public class AppTest {
      */
     @Test
     public void e2eTest() {
-        String input = "grep -c ERROR";
+        String input = "grep -c PUT";
 
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);

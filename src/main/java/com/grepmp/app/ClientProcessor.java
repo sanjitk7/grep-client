@@ -12,6 +12,7 @@ public class ClientProcessor implements Runnable {
     String grepCommand;
     String serverId;
     volatile static int grepResultTotalLineCount;
+    volatile static int grepFileCount;
 
     public ClientProcessor(String ip, int port, String serverId, String grepCommand){
         this.ip = ip;
@@ -35,7 +36,12 @@ public class ClientProcessor implements Runnable {
 
             String grepCommandResult=new String(grepCommandResultBytes,"UTF-8");
             System.out.println(serverId + " : " + grepCommandResult);
-            grepResultTotalLineCount += Integer.parseInt(grepCommandResult);
+
+            if (grepCommandResult.length() > 0) {
+                grepFileCount++;
+            }
+            
+            // grepResultTotalLineCount += Integer.parseInt(grepCommandResult);
 
             // Store output in a text file
             FileWriter writer = new FileWriter("output.txt", true);
