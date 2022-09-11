@@ -2,8 +2,8 @@ package com.grepmp.app;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.FileWriter;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class ClientProcessor implements Runnable {
 
@@ -32,10 +32,17 @@ public class ClientProcessor implements Runnable {
             int byteArrayLength=dinp.readInt();
             byte[] grepCommandResultBytes=new byte[byteArrayLength];
             dinp.readFully(grepCommandResultBytes);
-            String grepCommandResult=new String(grepCommandResultBytes,"UTF-8");
 
+            String grepCommandResult=new String(grepCommandResultBytes,"UTF-8");
             System.out.println(serverId + " : " + grepCommandResult);
             grepResultTotalLineCount += Integer.parseInt(grepCommandResult);
+
+            // Store output in a text file
+            FileWriter writer = new FileWriter("output.txt", true);
+            writer.write(serverId + " : " + grepCommandResult);
+            writer.write("\n");
+            writer.close();
+
             dout.close();
             s1.close();
         } catch (Exception e) {

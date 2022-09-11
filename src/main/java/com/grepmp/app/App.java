@@ -7,6 +7,8 @@ import com.grepmp.app.CommandReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
 import java.util.Properties;
@@ -19,6 +21,16 @@ public class App {
         System.out.println("Enter GREP Command: ");
         CommandReader CD = new CommandReader();
         String grepCommand = CD.ReadCommand();
+
+        // output.txt stores the returned data
+        // Has to be cleared for each execution run
+        try {
+            FileWriter writer = new FileWriter("output.txt");
+            writer.write("");
+            writer.close();
+        } catch (IOException e) {
+            System.out.println(e);
+        }
 
         try {
             // Getting Server Config data from properties file.
