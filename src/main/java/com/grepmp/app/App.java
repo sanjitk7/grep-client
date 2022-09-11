@@ -18,7 +18,7 @@ import java.util.Arrays;
 import org.apache.commons.lang3.time.StopWatch;
 
 public class App {
-    public String networkConfigPath = "./src/networkConfig.properties";
+    public static String networkConfigPath = "./src/networkConfig.properties";
     public static void main(String[] args) {
 
         System.out.println("Enter GREP Command: ");

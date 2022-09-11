@@ -1,0 +1,183 @@
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c GET
+fa22-cs425-6504.cs.illinois.edu::3002 : 162590
+fa22-cs425-6505.cs.illinois.edu::3002 : 162714
+fa22-cs425-6501.cs.illinois.edu::3002 : 170372
+fa22-cs425-6508.cs.illinois.edu::3002 : 164776
+FILE MATCHES: 4
+TIME ELAPSED: 966
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c GET
+fa22-cs425-6504.cs.illinois.edu::3002 : 162590
+fa22-cs425-6505.cs.illinois.edu::3002 : 162714
+fa22-cs425-6501.cs.illinois.edu::3002 : 170372
+fa22-cs425-6508.cs.illinois.edu::3002 : 164776
+FILE MATCHES: 4
+TIME ELAPSED: 943
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c GET
+fa22-cs425-6504.cs.illinois.edu::3002 : 162590
+fa22-cs425-6501.cs.illinois.edu::3002 : 170372
+fa22-cs425-6505.cs.illinois.edu::3002 : 162714
+fa22-cs425-6508.cs.illinois.edu::3002 : 164776
+FILE MATCHES: 4
+TIME ELAPSED: 941
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c GET
+fa22-cs425-6504.cs.illinois.edu::3002 : 162590
+fa22-cs425-6505.cs.illinois.edu::3002 : 162714
+fa22-cs425-6501.cs.illinois.edu::3002 : 170372
+fa22-cs425-6508.cs.illinois.edu::3002 : 164776
+FILE MATCHES: 4
+TIME ELAPSED: 932
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c GET
+fa22-cs425-6504.cs.illinois.edu::3002 : 162590
+fa22-cs425-6505.cs.illinois.edu::3002 : 162714
+fa22-cs425-6501.cs.illinois.edu::3002 : 170372
+fa22-cs425-6508.cs.illinois.edu::3002 : 164776
+FILE MATCHES: 4
+TIME ELAPSED: 965
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c 123.163.215.36
+fa22-cs425-6504.cs.illinois.edu::3002 : 0
+fa22-cs425-6505.cs.illinois.edu::3002 : 0
+fa22-cs425-6508.cs.illinois.edu::3002 : 0
+fa22-cs425-6501.cs.illinois.edu::3002 : 0
+FILE MATCHES: 4
+TIME ELAPSED: 1481
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c 123.163.215.36
+fa22-cs425-6505.cs.illinois.edu::3002 : 0
+fa22-cs425-6504.cs.illinois.edu::3002 : 0
+fa22-cs425-6508.cs.illinois.edu::3002 : 0
+fa22-cs425-6501.cs.illinois.edu::3002 : 0
+FILE MATCHES: 4
+TIME ELAPSED: 1052
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c 123.163.215.36
+fa22-cs425-6505.cs.illinois.edu::3002 : 0
+fa22-cs425-6504.cs.illinois.edu::3002 : 0
+fa22-cs425-6508.cs.illinois.edu::3002 : 0
+fa22-cs425-6501.cs.illinois.edu::3002 : 0
+FILE MATCHES: 4
+TIME ELAPSED: 1069
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c 123.163.215.36
+fa22-cs425-6505.cs.illinois.edu::3002 : 0
+fa22-cs425-6508.cs.illinois.edu::3002 : 0
+fa22-cs425-6501.cs.illinois.edu::3002 : 0
+fa22-cs425-6504.cs.illinois.edu::3002 : 0
+FILE MATCHES: 4
+TIME ELAPSED: 1099
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c 123.163.215.36
+fa22-cs425-6505.cs.illinois.edu::3002 : 0
+fa22-cs425-6504.cs.illinois.edu::3002 : 0
+fa22-cs425-6508.cs.illinois.edu::3002 : 0
+fa22-cs425-6501.cs.illinois.edu::3002 : 0
+FILE MATCHES: 4
+TIME ELAPSED: 1259
+[aruna2@fa22-cs425-6501 grep-client]$ 
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -cv Mozilla       
+fa22-cs425-6505.cs.illinois.edu::3002 : 13701
+fa22-cs425-6504.cs.illinois.edu::3002 : 13835
+fa22-cs425-6508.cs.illinois.edu::3002 : 13848
+fa22-cs425-6501.cs.illinois.edu::3002 : 14355
+FILE MATCHES: 4
+TIME ELAPSED: 1112
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -cv Mozilla       
+fa22-cs425-6504.cs.illinois.edu::3002 : 13835
+fa22-cs425-6505.cs.illinois.edu::3002 : 13701
+fa22-cs425-6508.cs.illinois.edu::3002 : 13848
+fa22-cs425-6501.cs.illinois.edu::3002 : 14355
+FILE MATCHES: 4
+TIME ELAPSED: 1035
+[aruna2@fa22-cs425-6501 grep-client]$ 
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -cv Mozilla       
+fa22-cs425-6504.cs.illinois.edu::3002 : 13835
+fa22-cs425-6505.cs.illinois.edu::3002 : 13701
+fa22-cs425-6508.cs.illinois.edu::3002 : 13848
+fa22-cs425-6501.cs.illinois.edu::3002 : 14355
+FILE MATCHES: 4
+TIME ELAPSED: 1038
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -cv Mozilla       
+fa22-cs425-6505.cs.illinois.edu::3002 : 13701
+fa22-cs425-6504.cs.illinois.edu::3002 : 13835
+fa22-cs425-6508.cs.illinois.edu::3002 : 13848
+fa22-cs425-6501.cs.illinois.edu::3002 : 14355
+FILE MATCHES: 4
+TIME ELAPSED: 1045
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -cv Mozilla       
+fa22-cs425-6505.cs.illinois.edu::3002 : 13701
+fa22-cs425-6504.cs.illinois.edu::3002 : 13835
+fa22-cs425-6508.cs.illinois.edu::3002 : 13848
+fa22-cs425-6501.cs.illinois.edu::3002 : 14355
+FILE MATCHES: 4
+TIME ELAPSED: 1038
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c http://thompson-roberts.com/
+fa22-cs425-6505.cs.illinois.edu::3002 : 1
+fa22-cs425-6508.cs.illinois.edu::3002 : 0
+fa22-cs425-6504.cs.illinois.edu::3002 : 0
+fa22-cs425-6501.cs.illinois.edu::3002 : 1
+FILE MATCHES: 4
+TIME ELAPSED: 1058
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c http://thompson-roberts.com/
+fa22-cs425-6505.cs.illinois.edu::3002 : 1
+fa22-cs425-6504.cs.illinois.edu::3002 : 0
+fa22-cs425-6508.cs.illinois.edu::3002 : 0
+fa22-cs425-6501.cs.illinois.edu::3002 : 1
+FILE MATCHES: 4
+TIME ELAPSED: 1021
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c http://thompson-roberts.com/
+fa22-cs425-6504.cs.illinois.edu::3002 : 0
+fa22-cs425-6505.cs.illinois.edu::3002 : 1
+fa22-cs425-6508.cs.illinois.edu::3002 : 0
+fa22-cs425-6501.cs.illinois.edu::3002 : 1
+FILE MATCHES: 4
+TIME ELAPSED: 1022
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c http://thompson-roberts.com/
+fa22-cs425-6505.cs.illinois.edu::3002 : 1
+fa22-cs425-6504.cs.illinois.edu::3002 : 0
+fa22-cs425-6508.cs.illinois.edu::3002 : 0
+fa22-cs425-6501.cs.illinois.edu::3002 : 1
+FILE MATCHES: 4
+TIME ELAPSED: 1031
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c http://thompson-roberts.com/
+fa22-cs425-6505.cs.illinois.edu::3002 : 1
+fa22-cs425-6508.cs.illinois.edu::3002 : 0
+fa22-cs425-6504.cs.illinois.edu::3002 : 0
+fa22-cs425-6501.cs.illinois.edu::3002 : 1
+FILE MATCHES: 4
+TIME ELAPSED: 1046
+[aruna2@fa22-cs425-6501 grep-client]$  
