@@ -41,7 +41,7 @@ public class ClientProcessor implements Runnable {
                 grepFileCount++;
             }
             
-            // grepResultTotalLineCount += Integer.parseInt(grepCommandResult);
+            grepResultTotalLineCount += Integer.parseInt(grepCommandResult);
 
             // Store output in a text file
             FileWriter writer = new FileWriter("output.txt", true);

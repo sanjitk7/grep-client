@@ -73,8 +73,8 @@ public class App {
                 clientThread[i].join();
             }
             watch.stop();
-            // System.out.println("TOTAL LINE COUNT: " + ClientProcessor.grepResultTotalLineCount);
-            System.out.println("FILE MATCHES: " + ClientProcessor.grepFileCount);
+            System.out.println("TOTAL LINE COUNT: " + ClientProcessor.grepResultTotalLineCount);
+            // System.out.println("FILE MATCHES: " + ClientProcessor.grepFileCount);
             System.out.println("TIME ELAPSED: " + watch.getTime());
         } catch (Exception e) {
             System.out.println(e);

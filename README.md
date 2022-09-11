@@ -27,24 +27,24 @@ Using a timer within the system program, we can measure the amount of time it ta
 Type 1: Pattern that does not occur
 [aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
 Enter GREP Command: 
+grep -c GET
+fa22-cs425-6505.cs.illinois.edu::3002 : 162714
+fa22-cs425-6508.cs.illinois.edu::3002 : 164776
+fa22-cs425-6504.cs.illinois.edu::3002 : 162590
+fa22-cs425-6501.cs.illinois.edu::3002 : 170372
+TOTAL LINE COUNT: 660452
+TIME ELAPSED: 1206
+
+Type 2: Highly frequent patterns
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
 grep -c 123.163.215.36
 fa22-cs425-6505.cs.illinois.edu::3002 : 0
 fa22-cs425-6504.cs.illinois.edu::3002 : 0
 fa22-cs425-6508.cs.illinois.edu::3002 : 0
 fa22-cs425-6501.cs.illinois.edu::3002 : 0
-FILE MATCHES: 4
-TIME ELAPSED: 1052
-
-Type 2: Highly frequent patterns
-[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
-Enter GREP Command: 
-grep -c GET
-fa22-cs425-6504.cs.illinois.edu::3002 : 162590
-fa22-cs425-6505.cs.illinois.edu::3002 : 162714
-fa22-cs425-6501.cs.illinois.edu::3002 : 170372
-fa22-cs425-6508.cs.illinois.edu::3002 : 164776
-FILE MATCHES: 4
-TIME ELAPSED: 965
+TOTAL LINE COUNT: 0
+TIME ELAPSED: 1046
 
 Type 3: Infrequent pattern
 [aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
@@ -54,8 +54,19 @@ fa22-cs425-6505.cs.illinois.edu::3002 : 1
 fa22-cs425-6508.cs.illinois.edu::3002 : 0
 fa22-cs425-6504.cs.illinois.edu::3002 : 0
 fa22-cs425-6501.cs.illinois.edu::3002 : 1
-FILE MATCHES: 4
-TIME ELAPSED: 1046
+TOTAL LINE COUNT: 2
+TIME ELAPSED: 1068
+
+Type 4: Regex pattern
+[aruna2@fa22-cs425-6501 grep-client]$ java -cp "target/grepmp-1.0-SNAPSHOT.jar:target/dependency/*" com.grepmp.app.App
+Enter GREP Command: 
+grep -c G[EI]T
+fa22-cs425-6501.cs.illinois.edu::3002 : 170372
+fa22-cs425-6505.cs.illinois.edu::3002 : 162714
+fa22-cs425-6508.cs.illinois.edu::3002 : 164776
+fa22-cs425-6504.cs.illinois.edu::3002 : 162590
+TOTAL LINE COUNT: 660452
+TIME ELAPSED: 1425
 
 ```
 
